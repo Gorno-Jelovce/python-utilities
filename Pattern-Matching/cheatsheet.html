@@ -1,0 +1,178 @@
+<div id="cheatsheet" class="coll">
+                <div class="collheader button">
+                  Regular expression cheatsheet
+                </div>
+                <div class="collcontent" style="display: block;">
+                  <div class="cheatgroup" style="float:left">
+                  <h3>Special characters</h3>
+                  <div class="round">
+                    <table>
+                      <tbody><tr>
+                        <td class="key_td"><code>\</code></td>
+                        <td>escape special characters</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>.</code></td>
+                        <td>matches any character</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>^</code></td>
+                        <td>matches beginning of string</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>$</code></td>
+                        <td>matches end of string</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>[5b-d]</code></td>
+                        <td>matches any chars '5', 'b', 'c' or 'd'</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>[^a-c6]</code></td>
+                        <td>matches any char except 'a', 'b', 'c' or '6'</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>R|S</code></td>
+                        <td>matches either regex <code>R</code> or regex <code>S</code></td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>()</code></td>
+                        <td>creates a capture group and indicates precedence</td>
+                      </tr>
+                    </tbody></table>
+                  </div>
+                  </div>
+                  <div class="cheatgroup" style="float:right; clear:right">
+                  <h3>Quantifiers</h3>
+                  <div class="round">
+                    <table>
+                      <tbody><tr>
+                        <td class="key_td"><code>*</code></td>
+                        <td>0 or more (append <code>?</code> for non-greedy)</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>+</code></td>
+                        <td>1 or more (append <code>?</code> for non-greedy)</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>?</code></td>
+                        <td>0 or 1 (append <code>?</code> for non-greedy)</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>{m}</code></td>
+                        <td>exactly <code>m</code>m occurrences</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>{m, n}</code></td>
+                        <td>from <code>m</code> to <code>n</code>. <code>m</code> defaults to 0, <code>n</code> to infinity</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>{m, n}?</code></td>
+                        <td>from <code>m</code> to <code>n</code>, as few as possible</td>
+                      </tr>
+                    </tbody></table>
+                  </div>
+                  </div>
+                  <div class="cheatgroup" style="float:left; clear:left">
+                  <h3>Special sequences</h3>
+                  <div class="round">
+                    <table>
+                      <tbody><tr>
+                        <td class="key_td"><code>\A</code></td>
+                        <td>start of string</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>\b</code></td>
+                        <td>matches empty string at word boundary (between <code>\w</code> and <code>\W</code>)</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>\B</code></td>
+                        <td>matches empty string not at word boundary</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>\d</code></td>
+                        <td>digit</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>\D</code></td>
+                        <td>non-digit</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>\s</code></td>
+                        <td>whitespace: <code>[ \t\n\r\f\v]</code></td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>\S</code></td>
+                        <td>non-whitespace</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>\w</code></td>
+                        <td>alphanumeric: <code>[0-9a-zA-Z_]</code></td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>\W</code></td>
+                        <td>non-alphanumeric</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>\Z</code></td>
+                        <td>end of string</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>\g&lt;id&gt;</code></td>
+                        <td>matches a previously defined group</td>
+                      </tr>
+                    </tbody></table>
+                  </div>
+                  </div>
+                  <div class="cheatgroup" style="float:right; clear:right">
+                  <h3>Special sequences</h3>
+                  <div class="round">
+                    <table>
+                      <tbody><tr>
+                        <td class="key_td"><code>(?iLmsux)</code></td>
+                        <td>matches empty string, sets re.X flags</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>(?:...)</code></td>
+                        <td>non-capturing version of regular parentheses</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>(?P<name>...)</name></code></td>
+                        <td>matches whatever matched previously named group</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>(?P=<name>)</name></code></td>
+                        <td>digit</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>(?#...)</code></td>
+                        <td>a comment; ignored</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>(?=...)</code></td>
+                        <td>lookahead assertion: matches without consuming</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>(?!...)</code></td>
+                        <td>negative lookahead assertion</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>(?&lt;=...)</code></td>
+                        <td>lookbehind assertion: matches if preceded</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>(?&lt;!...)</code></td>
+                        <td>negative lookbehind assertion</td>
+                      </tr>
+                      <tr>
+                        <td class="key_td"><code>(?(id)yes|no)</code></td>
+                        <td>match 'yes' if group 'id' matched, else 'no'</td>
+                      </tr>
+                    </tbody></table>
+                  </div>
+                  </div>
+                  <div id="python-regex-cheatsheet-credit">
+                    Based on tartley's <a href="https://github.com/tartley/python-regex-cheatsheet/">python-regex-cheatsheet</a>.
+                  </div>
+                </div>
+              </div>
