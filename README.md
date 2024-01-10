@@ -5,3 +5,4 @@ Utility GUI and command line tools written in python
 - Input Validation
 - Files
 - File Organisation
+- Debugging
