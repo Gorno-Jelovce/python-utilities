@@ -6,3 +6,4 @@ Utility GUI and command line tools written in python
 - Files
 - File Organisation
 - Debugging
+- Web Scrapping
